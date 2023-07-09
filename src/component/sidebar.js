@@ -77,14 +77,17 @@ opacity: ${props => props.show ? "1" : "0"};
   }
 `;
 
-const Media = styled.span`
+const Media = styled.a`
 color: white;
 trnasition: margin-bottom 1s;
+text-decoration: none;
+&:visited {
+    text-decoration: none;
+}
 &:hover {
     color: #f5df4e;
     margin-bottom: 0.3rem;
   }
-
 `;
 
 class Sidebar extends React.Component {
@@ -101,16 +104,16 @@ class Sidebar extends React.Component {
                     <Link href="#contact">Contact</Link>
                 </LinksContainer>
                 <MediaContainer show={this.props.show}>
-                    <Media>
+                    <Media href='https://github.com/Mmoujane/'>
                         <FaGithub />
                     </Media>
-                    <Media>
+                    <Media href='https://www.instagram.com/marwane_moujane/'>
                         <FaInstagram />
                     </Media>
-                    <Media>
+                    <Media href=''>
                         <FaLinkedin />
                     </Media>
-                    <Media>
+                    <Media href=''>
                         <FaTwitter />
                     </Media>
                 </MediaContainer>

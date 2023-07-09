@@ -24,8 +24,9 @@ align-items: center;
 transform: ${props => props.visible ? 'translate(0, 0)' : 'translate(0, 100px)'};
 opacity: ${props => props.visible ? 1 : 0};
 transition: opacity 2s, transform 2s;
+flex-direction: row-reverse;
 @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
   }
 `;
