@@ -26,11 +26,12 @@ align-items: center;
 background-color: white;
 position: fixed;
 top: 5%;
-left: 5%;
+left: 10%;
 z-index: 6;
 border-radius: 20px;
 @media (max-width: 768px) {
     width: 90vw;
+    left: 5%;
   }
 `;
 
@@ -61,14 +62,16 @@ justify-content: center;
 `;
 
 const ImageContainer = Styled.div`
-width: 70vh;
-height: 70vh;
+width: 50%;
+height: 40vw;
 display: flex;
 align-items: center;
 justify-content: center;
 border-radius: 20px;
 margin-right: 6vw;
 overflow: hidden;
+margin-top: 0.6rem;
+margin-bottom: 0.6rem;
 @media (max-width: 768px) {
     height: 30vh;
     width: 30vh;
@@ -138,9 +141,25 @@ right: 2%;
 top: 3%
 `;
 
+const Url = Styled.a`
+text-decoration: none;
+cursor: pointer;
+&:visited {
+    text-decoration: none;
+}
+background-color: #f5df4e;
+color: #212529;
+@media (max-width: 768px) {
+    font-size: calc(0.5rem + 1vw);
+  }
+font-size: calc(0.2rem + 1vw);
+padding: 0.5rem;
+`;
+
 
 
 const ProjectDetails = Styled(ProjectInfo)``;
+
 const Parag = Styled.p`
 @media (max-width: 768px) {
     font-size: calc(0.5rem + 1vw);
@@ -168,7 +187,7 @@ class Details extends React.Component {
                         <GrClose />
                     </Icon>
                     <Title>
-                        <span style={{borderBottom: "3px solid #f5df4e"}}>Project Title 1</span>
+                        <span style={{borderBottom: "3px solid #f5df4e"}}>{this.props.title}</span>
                     </Title>
                     <StyledImageDetails>
                         <ImageContainer>
@@ -177,29 +196,29 @@ class Details extends React.Component {
                         <Explanation>
                             <ProjectInfo>
                                 <H1>Project Info:</H1>
-                                <Parag>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Lisque persius interesset his et in quot quidam vim ad persequeris, ad mea essent possim iriure.</Parag>
+                                <Parag>{this.props.paragraph}</Parag>
                             </ProjectInfo>
                             <ProjectDetails>
                                  <H1>Project Details:</H1>
                                  <Description>
                                     <SubTitle>Client:</SubTitle>
-                                    <span>Ruby Clinton</span>
+                                    <span>{this.props.client}</span>
                                  </Description>
                                  <Description>
                                     <SubTitle>industry:</SubTitle>
-                                    <span>Art and Design</span>
+                                    <span>{this.props.industry}</span>
                                  </Description>
                                  <Description>
                                     <SubTitle>Technologies:</SubTitle>
-                                    <span>iOS, HTML5, CSS3, PHP, Java</span>
+                                    <span>{this.props.technology}</span>
                                  </Description>
                                  <Description>
                                     <SubTitle>Date:</SubTitle>
-                                    <span>16 july 2022</span>
+                                    <span>{this.props.date}</span>
                                  </Description>
                                  <Description>
                                     <SubTitle>URL:</SubTitle>
-                                    <span style={{backgroundColor: '#f5df4e', color: '#212529' ,fontSize: 'calc(0.5rem + 1vw)', padding:'0.5rem'}}>www.website.com</span>
+                                    <Url href={this.props.project}>{this.props.project}</Url>
                                  </Description>
                             </ProjectDetails>
                         </Explanation>

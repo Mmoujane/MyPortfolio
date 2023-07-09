@@ -1,12 +1,12 @@
 import React from 'react';
 import Styled from 'styled-components';
 import {StyledSection, FirstContainer} from './MoreInformation';
-import Img01 from '../images/brando-makes-branding-ljurPRAnLAQ-unsplash.jpg';
-import Img02 from '../images/daniel-korpai-pKRNxEguRgM-unsplash.jpg';
-import Img03 from '../images/eftakher-alam-i1VQZsU86ok-unsplash.jpg';
-import Img04 from '../images/leio-mclaren-OzeOpF6kTyg-unsplash.jpg';
-import Img05 from '../images/markus-spiske-Skf7HxARcoc-unsplash.jpg';
-import Img06 from '../images/sai-kiran-anagani-Tjbk79TARiE-unsplash.jpg';
+import Img01 from '../images/portfolio.jpg';
+import Img02 from '../images/e-commerce.jpg';
+import Img03 from '../images/scr.jpg';
+import Img04 from '../images/leetcode.jpg';
+import Img05 from '../images/python.jpg';
+import Img06 from '../images/game_engine.png';
 import Details from './Details';
 
 
@@ -70,9 +70,13 @@ display: ${props => props.Dispaly};
 
 const SubFilter = Styled.span`
 font-size: calc(0.5rem + 1vw);
-color: #6c757d;
+color: ${props => props.clicked ? '#212529' : 'gray'};
 margin: 0 1.3rem;
 cursor: pointer;
+background-color: ${props => props.clicked ? '#f5df4e' : 'rgba(248,249,250)'};
+&:hover{
+    color: ${props => props.clicked ? '#212529' : '#f5df4e'};
+}
 `;
 
 const Shaddow = Styled.div`
@@ -94,12 +98,23 @@ class Projects extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            web : 'block',
-            automation: 'block',
-            mobile : 'block',
+            web : true,
+            algo: true,
+            graphics : true,
             url : '',
+            title: '',
+            paragraph: '',
+            client: '',
+            industry: '',
+            technology: '',
+            date: '',
+            project: '',
             display : false,
-            refvisible: false
+            refvisible: false,
+            allclick: true,
+            webclick: false,
+            algoclick: false,
+            graphclick: false
         }
 
         this.myref = React.createRef();
@@ -118,35 +133,60 @@ class Projects extends React.Component{
     }
 
     Choice = (select) => {
+
         if(select == 'web'){
             this.setState({
-                web: 'block',
-                automation: 'none',
-                mobile: 'none'
+                web: true,
+                algo: false,
+                graphics: false,
+                webclick: true,
+                algoclick: false,
+                allclick: false,
+                graphclick: false
             })
-        }else if(select == 'auto'){
+        }else if(select == 'algo'){
             this.setState({
-                web: 'none',
-                automation: 'block',
-                mobile: 'none'
+                web: false,
+                algo: true,
+                graphics: false,
+                webclick: false,
+                algoclick: true,
+                allclick: false,
+                graphclick: false
             })
-        }else if(select == 'mobile'){
+        }else if(select == 'graphics'){
             this.setState({
-                web: 'none',
-                automation: 'none',
-                mobile: 'block'
+                web: false,
+                algo: false,
+                graphics: true,
+                webclick: false,
+                algoclick: false,
+                allclick: false,
+                graphclick: true
             })
         }else{
             this.setState({
-                web: 'block',
-                automation: 'block',
-                mobile: 'block'
+                web: true,
+                algo: true,
+                graphics: true,
+                webclick: false,
+                algoclick: false,
+                allclick: true,
+                graphclick: false
             })
         }
     }
 
-    Details = (Url) => {
-        this.setState({url: Url,
+    Details = (Url, title, parag, client, industry, tech, date, proj) => {
+        this.setState({
+            url: Url,
+            title: title,
+            paragraph: parag,
+            client: client,
+            industry: industry,
+            technology: tech,
+            date: date,
+            project: proj,
             display: true
         })
     }
@@ -165,46 +205,46 @@ class Projects extends React.Component{
                 </Title>
                 <ProjectContainer visible={this.state.refvisible}>
                     <Filter>
-                        <SubFilter onClick={() => this.Choice('all')}>All</SubFilter>
-                        <SubFilter onClick={() => this.Choice('web')}>Web</SubFilter>
-                        <SubFilter onClick={() => this.Choice('auto')}>Automation</SubFilter>
-                        <SubFilter onClick={() => this.Choice('mobile')}>mobile</SubFilter>
+                        <SubFilter onClick={() => this.Choice('all')} clicked={this.state.allclick}>All</SubFilter>
+                        <SubFilter onClick={() => this.Choice('web')} clicked={this.state.webclick}>Web</SubFilter>
+                        <SubFilter onClick={() => this.Choice('algo')} clicked={this.state.algoclick}>algorithm</SubFilter>
+                        <SubFilter onClick={() => this.Choice('graphics')} clicked={this.state.graphclick}>graphics</SubFilter>
                     </Filter>
                     <StyledProjects>
-                        <Project url={Img01} Dispaly={this.state.mobile} onClick={() => this.Details(Img01)}>
-                            <Shaddow>
-                               <span style={{color: 'white' ,fontSize: 'calc(0.8rem + 1vw)', fontWeight: '600'}}>phone category</span>
-                            </Shaddow>
-                        </Project>
-                        <Project url={Img02} Dispaly={this.state.web} onClick={() => this.Details(Img02)}>
+                        <Project url={Img01} Dispaly={this.state.web ? 'block' : 'none'} onClick={() => this.Details(Img01, 'portfolio', 'I have created a portfolio website from scratch using React.js, showcasing my skills and projects in an interactive and visually appealing manner. By harnessing the power of React.js, I have built a dynamic and responsive portfolio that provides a seamless user experience. Through modular component-based development, I have organized my projects, skills, and achievements into distinct sections, allowing visitors to easily navigate and explore my work.', 'public', '', 'React.js', '', 'https://github.com/Mmoujane/portfolio')}>
                             <Shaddow>
                                <span style={{color: 'white' ,fontSize: 'calc(0.8rem + 1vw)', fontWeight: '600'}}>web category</span>
                             </Shaddow>
                         </Project>
-                        <Project url={Img03} Dispaly={this.state.web} onClick={() => this.Details(Img03)}>
+                        <Project url={Img02} Dispaly={this.state.web ? 'block' : 'none'} onClick={() => this.Details(Img02, 'restaurant', "I have designed and developed a comprehensive e-commerce restaurant website from scratch, utilizing React.js for the frontend and Node.js for the backend. This seamless integration of technologies ensures a robust and efficient platform for online ordering and dining experiences.", 'public', '', 'React.js, node.js(express), mongodb', '', 'https://github.com/Mmoujane/restaurent-website')}>
                             <Shaddow>
                                <span style={{color: 'white' ,fontSize: 'calc(0.8rem + 1vw)', fontWeight: '600'}}>web category</span>
                             </Shaddow>
                         </Project>
-                        <Project url={Img04} Dispaly={this.state.mobile} onClick={() => this.Details(Img04)}>
+                        <Project url={Img03} Dispaly={this.state.web ? 'block' : 'none'} onClick={() => this.Details(Img03, 'scribd-extention', 'I have developed a custom extension that unlocks hidden content on the Scribd website, providing users with unrestricted access to valuable information. This extension empowers users to overcome limitations and access premium content without any barriers.', 'public', '', 'javascript', '', 'https://github.com/Mmoujane/scribd-extention')}>
                             <Shaddow>
-                               <span style={{color: 'white' ,fontSize: 'calc(0.8rem + 1vw)', fontWeight: '600'}}>phone category</span>
+                               <span style={{color: 'white' ,fontSize: 'calc(0.8rem + 1vw)', fontWeight: '600'}}>web category</span>
                             </Shaddow>
                         </Project>
-                        <Project url={Img05} Dispaly={this.state.automation} onClick={() => this.Details(Img05)}>
+                        <Project url={Img04} Dispaly={this.state.algo ? 'block' : 'none'} onClick={() => this.Details(Img04, 'leetcode problems', 'I have developed a collection of C++ algorithms specifically tailored for solving LeetCode problems. These algorithms leverage the power and efficiency of C++ to tackle a wide range of problem-solving scenarios. With a focus on data structures, algorithmic techniques, and optimized code, I have designed solutions that are both accurate and performant.', 'public', '', 'c, c++', '', 'https://github.com/Mmoujane/c-leetcode-problems')}>
                             <Shaddow>
-                               <span style={{color: 'white' ,fontSize: 'calc(0.8rem + 1vw)', fontWeight: '600'}}>automation category</span>
+                               <span style={{color: 'white' ,fontSize: 'calc(0.8rem + 1vw)', fontWeight: '600'}}>algorithm category</span>
                             </Shaddow>
                         </Project>
-                        <Project url={Img06} Dispaly={this.state.automation} onClick={() => this.Details(Img06)}>
+                        <Project url={Img05} Dispaly={this.state.algo ? 'block' : 'none'} onClick={() => this.Details(Img05, 'python projects', "I have curated a diverse collection of small Python projects that showcase my versatility and proficiency in the language. These projects exemplify my creativity, problem-solving abilities, and coding skills in various domains. From simple console-based games to practical utilities, each project highlights different aspects of Python's capabilities.", 'public', '', 'python', 'jun 14, 2022', 'https://github.com/Mmoujane/python_projects')}>
                             <Shaddow>
-                               <span style={{color: 'white' ,fontSize: 'calc(0.8rem + 1vw)', fontWeight: '600'}}>automation category</span>
+                               <span style={{color: 'white' ,fontSize: 'calc(0.8rem + 1vw)', fontWeight: '600'}}>algorithm category</span>
+                            </Shaddow>
+                        </Project>
+                        <Project url={Img06} Dispaly={this.state.graphics ? 'block' : 'none'} onClick={() => this.Details(Img06, 'game engine', "I am currently in the process of developing a Python game engine using the Tkinter GUI library. This game engine is a work in progress, aimed at creating interactive and visually appealing games. By utilizing Tkinter's robust widget library and event-driven programming, I am building a foundation for designing engaging gameplay mechanics, dynamic graphics, and immersive user interfaces.", 'public', '', 'python, tkinter', '', 'https://github.com/Mmoujane/game_engine')}>
+                            <Shaddow>
+                               <span style={{color: 'white' ,fontSize: 'calc(0.8rem + 1vw)', fontWeight: '600'}}>graphics category</span>
                             </Shaddow>
                         </Project>
                     </StyledProjects>
                 </ProjectContainer>
                 </Container>
-                <Details URL={this.state.display} img={this.state.url} Close={this.close}/>
+                <Details URL={this.state.display} img={this.state.url} title={this.state.title} paragraph={this.state.paragraph} client={this.state.client} industry={this.state.industry} technology={this.state.technology} date={this.state.date} project={this.state.project} Close={this.close}/>
             </SSection>
         
         );

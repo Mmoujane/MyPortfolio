@@ -3,7 +3,7 @@ import Styled from "styled-components";
 import {FirstContainer} from './MoreInformation'
 import styled from "styled-components";
 import Button from "./Button";
-import IntroImg from '../images/intro-bg.jpeg';
+import IntroImg from '../images/me.jpg';
 
 
 const Container = Styled.section`
