@@ -1,16 +1,16 @@
 {
   "main.css": "static/css/main.6c2c5b27.css",
   "main.css.map": "static/css/main.6c2c5b27.css.map",
-  "main.js": "static/js/main.e89375ba.js",
-  "main.js.map": "static/js/main.e89375ba.js.map",
+  "main.js": "static/js/main.4531c14d.js",
+  "main.js.map": "static/js/main.4531c14d.js.map",
   "static/js/0.ae2fcd42.chunk.js": "static/js/0.ae2fcd42.chunk.js",
   "static/js/0.ae2fcd42.chunk.js.map": "static/js/0.ae2fcd42.chunk.js.map",
+  "static\\media\\combo.jpeg": "static/media/combo.d9b3681e.jpeg",
+  "static\\media\\design.png": "static/media/design.9934ac45.png",
   "static\\media\\e-commerce.jpg": "static/media/e-commerce.5a8e8efa.jpg",
+  "static\\media\\ent1.png": "static/media/ent1.f10ade52.png",
   "static\\media\\game_engine.png": "static/media/game_engine.6841b21c.png",
   "static\\media\\intro-bg.jpeg": "static/media/intro-bg.c914ddc6.jpeg",
-  "static\\media\\leetcode.jpg": "static/media/leetcode.b677021b.jpg",
-  "static\\media\\me.jpg": "static/media/me.4a607ac1.jpg",
-  "static\\media\\portfolio.jpg": "static/media/portfolio.85e196b0.jpg",
-  "static\\media\\python.jpg": "static/media/python.a4a2fa26.jpg",
-  "static\\media\\scr.jpg": "static/media/scr.a9ba04a5.jpg"
+  "static\\media\\me1.jpg": "static/media/me1.37f6d43d.jpg",
+  "static\\media\\portfolio.jpg": "static/media/portfolio.85e196b0.jpg"
 }
