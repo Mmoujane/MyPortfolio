@@ -157,7 +157,12 @@ class Experience extends React.Component{
                         <Study>
                            <span style={{fontSize: 'calc(0.7rem + 1vw)'}}>Classe Préparatoire program</span>
                            <span style={{fontSize: 'calc(0.4rem + 1vw)', padding: '0.5rem 0'}}>LM6E / 2023 - 2024</span>
-                           <p style={{fontSize: 'calc(0.5rem + 1vw)', color: '#6c757d'}}>Currently, I am enrolled in the Classe Préparatoire program at LM6E, with a clear goal of gaining admission to a prestigious engineering school. By participating in this rigorous program, I am preparing myself to meet the challenges of gaining entry into a renowned engineering institution.</p>
+                           <p style={{fontSize: 'calc(0.5rem + 1vw)', color: '#6c757d'}}>I successfully completed my Classe Préparatoire program, achieving a national ranking of 7th in Concours National Commun (CNC). This program, known for its rigorous curriculum in mathematics, physics, and engineering, prepared me to excel in problem-solving and critical thinking. My strong performance in the CNC, a national exam for entrance into top engineering schools in Morocco, reflects my dedication and determination throughout this challenging academic journey.</p>
+                        </Study>
+                        <Study>
+                           <span style={{fontSize: 'calc(0.7rem + 1vw)'}}>engineering degree in cybersecurity</span>
+                           <span style={{fontSize: 'calc(0.4rem + 1vw)', padding: '0.5rem 0'}}>INPT / 2024 - 2027</span>
+                           <p style={{fontSize: 'calc(0.5rem + 1vw)', color: '#6c757d'}}>After successfully passing the Concours National Commun, I chose to pursue an engineering degree in cybersecurity at the Institut National des Postes et Télécommunications (INPT) in Rabat. This decision was driven by my passion for technology and the growing importance of cybersecurity in today’s digital world. INPT’s specialized program in cybersecurity provides the ideal environment for me to develop the skills and knowledge necessary to address the challenges of securing information systems and networks, aligning with my long-term career goals.</p>
                         </Study>
                     </StudiesAndExperience>
                     <StudiesAndExperience>
@@ -224,6 +229,24 @@ class Experience extends React.Component{
                            </SkillPecentage>
                            <ProgressBar>
                                <Progress width='85%' visible={this.state.Tvisible}/>
+                           </ProgressBar>
+                       </SkillAndName>
+                       <SkillAndName>
+                           <SkillPecentage>
+                           <span style={{fontSize: 'calc(0.3rem + 1vw)', padding: '0.5rem 0'}}>mongodb</span>
+                           <span style={{fontSize: 'calc(0.3rem + 1vw)', padding: '0.5rem 0'}}>80%</span>
+                           </SkillPecentage>
+                           <ProgressBar>
+                               <Progress width='80%' visible={this.state.Tvisible}/>
+                           </ProgressBar>
+                       </SkillAndName>
+                       <SkillAndName>
+                           <SkillPecentage>
+                           <span style={{fontSize: 'calc(0.3rem + 1vw)', padding: '0.5rem 0'}}>mysql</span>
+                           <span style={{fontSize: 'calc(0.3rem + 1vw)', padding: '0.5rem 0'}}>80%</span>
+                           </SkillPecentage>
+                           <ProgressBar>
+                               <Progress width='80%' visible={this.state.Tvisible}/>
                            </ProgressBar>
                        </SkillAndName>
                    </SkillsProgressBars>

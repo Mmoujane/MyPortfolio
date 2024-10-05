@@ -110,7 +110,7 @@ class Sidebar extends React.Component {
                     <Media href='https://www.instagram.com/marwane_moujane/'>
                         <FaInstagram />
                     </Media>
-                    <Media href=''>
+                    <Media href='https://www.linkedin.com/in/marwan-moujane-400799322/'>
                         <FaLinkedin />
                     </Media>
                     <Media href=''>

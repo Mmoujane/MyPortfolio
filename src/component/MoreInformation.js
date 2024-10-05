@@ -66,14 +66,27 @@ width: 25%;
 `;
 
 const scale = keyframes`
-0% {font-size: calc(2.025rem + 9.3vw)}
-50% {font-size: calc(3.5rem + 9.3vw)}
-100% {font-size: calc(2.025rem + 9.3vw)}
+0% {
+    font-size: calc(2.025rem + 9.3vw);
+    width: 15vw;
+    height: 15vw;
+    
+}
+50% {
+    font-size: calc(3.5rem + 9.3vw);
+    width: calc(3.5rem + 15vw);
+    height: calc(3.5rem + 15vw);
+}
+100% {
+    font-size: calc(2.025rem + 9.3vw);
+    width: 15vw;
+    height: 15vw;
+}
 `;
 
 const RoundedStyle = Styled.span`
-width: 50%;
-height: 50%;
+width: 15vw;
+height: 15vw;
 background-color: #f5df4e;
 border-radius: 50%;
 display: flex;
@@ -86,6 +99,27 @@ animation-duration: 0.5s;
 animation-delay: 2s;
 animation-iteration-count: 2;
 animation-timing-function: ease;
+@media (max-width: 768px) {
+    width: 20vw;
+    height: 20vw;
+    animation-name: ${props => props.visible ? keyframes`
+      0% {
+        font-size: calc(2.025rem + 9.3vw);
+        width: 20vw;
+        height: 20vw;
+      }
+      50% {
+        font-size: calc(3.5rem + 9.3vw);
+        width: calc(3rem + 20vw);
+        height: calc(3rem + 20vw);
+      }
+      100% {
+        font-size: calc(2.025rem + 9.3vw);
+        width: 20vw;
+        height: 20vw;
+      }
+    ` : null};
+  }
 `;
 
 const Title = Styled.span`
@@ -188,7 +222,7 @@ class MoreInformation extends React.Component {
                         </Paragraph>
                     </FirstChild>
                     <SecondChild>
-                        <RoundedStyle visible={this.state.Svisible}>2</RoundedStyle>
+                        <RoundedStyle visible={this.state.Svisible}>3</RoundedStyle>
                         <Experience visible={this.state.Svisible}>years of<span style={{borderBottom: '3px solid #f5df4e', marginLeft: '1vw', fontWeight: '700'}}>experience</span></Experience>
                     </SecondChild>
                 </SecondContainer>
