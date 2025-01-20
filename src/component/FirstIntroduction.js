@@ -73,7 +73,7 @@ class FirstIntroduction extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            profession: 'a full stack developer',
+            profession: 'a software developer',
             typing: '',
             isTyping: true
         }

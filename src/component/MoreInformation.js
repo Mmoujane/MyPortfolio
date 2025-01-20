@@ -218,7 +218,7 @@ class MoreInformation extends React.Component {
                     <FirstChild>
                         <span style={{fontSize: '3vw', color: '#212529',display: 'flex', justifyContent: 'center', alignItems: 'center'}}>hi I'm <span style={{borderBottom: '3px solid #f5df4e', marginLeft: '2vw', fontWeight: '700'}}>marwane</span></span>
                         <Paragraph>
-                        I'm a designer and developer with a passion for web design. I enjoy developing simple, clean and slick websites that provide real value to the end user. Delivering work within time and budget which meets client’s requirements is our moto.
+                        Here, at pixels We’re passionate about empowering small businesses through smart digital solutions. From creating sleek, modern websites to developing automation tools that simplify your daily operations, our focus is on delivering real value.Meeting your needs within time and budget is what we do best.
                         </Paragraph>
                     </FirstChild>
                     <SecondChild>

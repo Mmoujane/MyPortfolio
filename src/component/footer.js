@@ -18,8 +18,8 @@ class Footer extends React.Component {
     render(){
         return(
             <Container>
-                <span style={{fontSize: '5vw', color: '#212529', fontWeight: '700'}}>Pixel</span>
-                <span style={{color: '#212529' ,fontSize: 'calc(0.7rem + 1vw)'}}>© 2023. All rights reserved by Pixel</span>
+                <span style={{fontSize: '5vw', color: '#212529', fontWeight: '700'}}>Pixels</span>
+                <span style={{color: '#212529' ,fontSize: 'calc(0.7rem + 1vw)'}}>© 2025. All rights reserved by Pixels</span>
             </Container>
 
         );

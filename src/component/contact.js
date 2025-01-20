@@ -272,7 +272,7 @@ class Contact extends React.Component {
                             </ZoomEffect>
                         </ImgContainer>
                         <Name>Marwan Moujane</Name>
-                        <Profission>Full stack developer</Profission>
+                        <Profission>Software developer</Profission>
                         <Profission>I am available for freelance work.</Profission>
                         <InfoContainer>
                             <Profission>Email: </Profission>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Styled from 'styled-components';
 import {StyledSection, FirstContainer} from './MoreInformation';
-import {FaPalette, FaDesktop, FaPen, FaBrush, FaChartArea, FaBullhorn} from 'react-icons/fa';
+import {FaPalette, FaDesktop, FaPen, FaBrush, FaChartArea, FaBullhorn, FaRobot} from 'react-icons/fa';
 
 
 const Styledsection = Styled(StyledSection)`
@@ -98,15 +98,15 @@ class Help extends React.Component{
                         <Icon>
                             <FaDesktop />
                         </Icon>
-                        <span style={{fontSize: 'calc(0.7rem + 1vw)'}}>Web Design</span>
-                        <p style={{fontSize: 'calc(0.5rem + 1vw)', color: '#6c757d'}}>I create engaging, user-friendly websites that align with client goals. Through collaboration, responsive design, and SEO optimization, I deliver impactful web solutions.</p>
+                       <span style={{fontSize: 'calc(0.7rem + 1vw)'}}>Web Developement</span>
+                        <p style={{fontSize: 'calc(0.5rem + 1vw)', color: '#6c757d'}}>I provide effective web development solutions, creating functional and dynamic websites that meet client objectives.</p>
                     </Skill>
                     <Skill>
                         <Icon>
-                            <FaPen />
+                            <FaRobot />
                         </Icon>
-                       <span style={{fontSize: 'calc(0.7rem + 1vw)'}}>Web Developement</span>
-                        <p style={{fontSize: 'calc(0.5rem + 1vw)', color: '#6c757d'}}>I provide effective web development solutions, creating functional and dynamic websites that meet client objectives.</p>
+                        <span style={{fontSize: 'calc(0.7rem + 1vw)'}}>Automation & scripting</span>
+                        <p style={{fontSize: 'calc(0.5rem + 1vw)', color: '#6c757d'}}>To save time and reduce manual work, we develop automation tools and scripts that streamline your operations.</p>
                     </Skill>
                 </SkillsContainer>
             </Styledsection>

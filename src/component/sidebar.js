@@ -95,7 +95,7 @@ class Sidebar extends React.Component {
     render(){
         return(
             <Container show={this.props.show}>
-                <Brand href="#intro" show={this.props.show}>Pixel</Brand>
+                <Brand href="#intro" show={this.props.show}>Pixels</Brand>
                 <LinksContainer show={this.props.show}>
                     <Link href="#about">About me</Link>
                     <Link href="#help">What i do</Link>

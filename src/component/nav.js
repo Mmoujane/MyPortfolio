@@ -101,7 +101,7 @@ class Nav extends React.Component {
             <div>
             <NavBar something={this.state.toogle}>
                 <Container>
-                    <Logo href="#intro">Pixel</Logo>
+                    <Logo href="#intro">Pixels</Logo>
                     <ContactContainer>
                         <Icon>
                             <FaPhone />

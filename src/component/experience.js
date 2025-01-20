@@ -180,19 +180,19 @@ class Experience extends React.Component{
                        <SkillAndName>
                            <SkillPecentage>
                               <span style={{fontSize: 'calc(0.3rem + 1vw)', padding: '0.5rem 0'}}>Web Design</span>
-                              <span style={{fontSize: 'calc(0.3rem + 1vw)', padding: '0.5rem 0'}}>50%</span>
+                              <span style={{fontSize: 'calc(0.3rem + 1vw)', padding: '0.5rem 0'}}>60%</span>
                            </SkillPecentage>
                            <ProgressBar>
-                               <Progress width='50%' visible={this.state.Tvisible}/>
+                               <Progress width='60%' visible={this.state.Tvisible}/>
                            </ProgressBar>
                        </SkillAndName>
                        <SkillAndName>
                            <SkillPecentage>
                            <span style={{fontSize: 'calc(0.3rem + 1vw)', padding: '0.5rem 0'}}>node.js/express.js</span>
-                           <span style={{fontSize: 'calc(0.3rem + 1vw)', padding: '0.5rem 0'}}>60%</span>
+                           <span style={{fontSize: 'calc(0.3rem + 1vw)', padding: '0.5rem 0'}}>80%</span>
                            </SkillPecentage>
                            <ProgressBar>
-                               <Progress width='60%' visible={this.state.Tvisible}/>
+                               <Progress width='80%' visible={this.state.Tvisible}/>
                            </ProgressBar>
                        </SkillAndName>
                        <SkillAndName>
@@ -247,6 +247,24 @@ class Experience extends React.Component{
                            </SkillPecentage>
                            <ProgressBar>
                                <Progress width='80%' visible={this.state.Tvisible}/>
+                           </ProgressBar>
+                       </SkillAndName>
+                       <SkillAndName>
+                           <SkillPecentage>
+                           <span style={{fontSize: 'calc(0.3rem + 1vw)', padding: '0.5rem 0'}}>java</span>
+                           <span style={{fontSize: 'calc(0.3rem + 1vw)', padding: '0.5rem 0'}}>65%</span>
+                           </SkillPecentage>
+                           <ProgressBar>
+                               <Progress width='65%' visible={this.state.Tvisible}/>
+                           </ProgressBar>
+                       </SkillAndName>
+                       <SkillAndName>
+                           <SkillPecentage>
+                           <span style={{fontSize: 'calc(0.3rem + 1vw)', padding: '0.5rem 0'}}>python</span>
+                           <span style={{fontSize: 'calc(0.3rem + 1vw)', padding: '0.5rem 0'}}>85%</span>
+                           </SkillPecentage>
+                           <ProgressBar>
+                               <Progress width='85%' visible={this.state.Tvisible}/>
                            </ProgressBar>
                        </SkillAndName>
                    </SkillsProgressBars>
